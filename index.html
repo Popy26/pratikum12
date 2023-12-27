@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image pikker</title>
+    <script>
+        function image_picker(){
+            const list_image = ["mikky1.png", "mikky2.png", "mikky3.png"];
+            let pilihan = document.getElementById("options").value;
+            
+
+            if( pilihan == "mikky1"){
+                let select = list_image[0]; //mikky1.png 
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "mikky2"){
+                let select = list_image[1]; //mikky2.png
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "mikky3"){
+                let select = list_image[2]; //mikky3.png
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Image picker</h1>
+
+    <select name="" id="options" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="mikky1">Mikky1</option>
+        <option value="mikky2">Mikky2</option>
+        <option value="mikky3">Mikky3</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="400px">
+    </div>
+
+</body>
+</html>
